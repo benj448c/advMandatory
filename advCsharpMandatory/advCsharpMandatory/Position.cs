@@ -9,6 +9,12 @@ namespace advCsharpMandatory
 		private double _position_X;
 		private double _position_Y;
 
+        public Position(double positionX, double positionY)
+        {
+            _position_X = positionX;
+            _position_Y = positionY;
+        }
+
 		public double Position_Y
 		{
 			get { return _position_Y; }
