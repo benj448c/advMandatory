@@ -4,37 +4,42 @@ using System.Text;
 
 namespace advCsharpMandatory
 {
-    class Creatures
+    class Creatures : Position
     {
-        private double _HP;
+        private double _HP = 100;
+        private bool _alive = true;
         private double _damage;
-        private List<AttackObject> _attackObject;
-        private List<DefenceObject> _defenceObject;
+        private AttackObject _attackObject;
+        private DefenceObject _defenceObject;
 
-        public Creatures(double hp, double damage, List<AttackObject> attackObject, List<DefenceObject> defenceObject)
+        public Creatures(double positionX, double positionY, double damage) : base(positionX, positionY)
         {
-            _HP = hp;
             _damage = damage;
-            _attackObject = attackObject;
-            _defenceObject = defenceObject;
         }
 
-        protected void Hit(Creatures target)
+        protected double Hit(Creatures target)
         {
-            
+            return _damage + _attackObject.Hitpoint;
         }
 
-        protected void RecieveHit()
+        protected void RecieveHit(double damageTaken)
         {
-
-        }
-
-        protected void PickUpObject(Object thing)
-        {
-            if (expr)
+            _HP -= damageTaken;
+            if (_HP < 0)
             {
-                
+                _alive = false;
             }
+        }
+
+        protected void PickUpAttackObject(AttackObject weapon)
+        {
+            _attackObject = weapon;
+        }
+
+
+        protected void PickUpDefenceObject(DefenceObject armor)
+        {
+            _defenceObject = armor;
         }
 
         public double HP
