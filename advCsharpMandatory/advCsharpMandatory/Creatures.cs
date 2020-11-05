@@ -11,14 +11,6 @@ namespace advCsharpMandatory
         private List<AttackObject> _attackObject;
         private List<DefenceObject> _defenceObject;
 
-        public Creatures(double hp, double damage, List<AttackObject> attackObject, List<DefenceObject> defenceObject)
-        {
-            _HP = hp;
-            _damage = damage;
-            _attackObject = attackObject;
-            _defenceObject = defenceObject;
-        }
-
         protected void Hit(Creatures target)
         {
             
@@ -31,10 +23,7 @@ namespace advCsharpMandatory
 
         protected void PickUpObject(Object thing)
         {
-            if (expr)
-            {
-                
-            }
+            
         }
 
         public double HP

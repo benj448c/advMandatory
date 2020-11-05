@@ -9,9 +9,7 @@ namespace advCsharpMandatory
 		private int _hitpoint;
 		private int _range;
 
-
-
-		public int Range
+        public int Range
 		{
 			get { return _range; }
 			set { _range = value; }
@@ -22,7 +20,5 @@ namespace advCsharpMandatory
 			get { return _hitpoint; }
 			set { _hitpoint = value; }
 		}
-
-
-	}
+    }
 }
