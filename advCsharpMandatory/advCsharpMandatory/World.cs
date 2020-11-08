@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using advCsharpMandatory.AbstractFactoryCreatures.AbstractProduct;
 using advCsharpMandatory.Objects;
 
 namespace advCsharpMandatory
@@ -9,11 +10,11 @@ namespace advCsharpMandatory
     {
 		private double _maxX;
 		private double _maxY;
-        public Dictionary<Position, GameObjects> Objectlist;
+        public Dictionary<Position, ICreatureStats> Objectlist;
 
         public World()
         {
-            Objectlist = new Dictionary<Position, GameObjects>();
+            Objectlist = new Dictionary<Position, ICreatureStats>();
         }
 
         public double MaxY
@@ -28,17 +29,5 @@ namespace advCsharpMandatory
 			set { _maxX = value; }
 		}
 
-        public void addObject(GameObjects thing)
-        {
-            if (!Objectlist.ContainsKey(thing.pos))
-            {
-                Objectlist.Add(thing.pos, thing);
-            }
-        }
-
-        public void removeObject(GameObjects thing)
-        {
-            Objectlist.Remove(thing.pos);
-        }
     }
 }

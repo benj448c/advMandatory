@@ -14,11 +14,13 @@ namespace advCsharpMandatory.AbstractFactory
             Console.WriteLine(zombieClient.GetEnemyCreatureDetails());
             Console.WriteLine(zombieClient.GetFriendlyCreatureDetails());
 
+            //Creating Dragon
             ICreature Dragon = new Dragon();
             client dragonClient = new client(Dragon);
 
-            Console.WriteLine(zombieClient.GetEnemyCreatureDetails());
-            Console.WriteLine(zombieClient.GetFriendlyCreatureDetails());
+            //to get details of zombie
+            Console.WriteLine(dragonClient.GetEnemyCreatureDetails());
+            Console.WriteLine(dragonClient.GetFriendlyCreatureDetails());
         }
     }
 }
