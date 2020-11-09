@@ -15,5 +15,10 @@ namespace advCsharpMandatory.Interfaces.DefenceObject
             BonusHP = bonusHp;
             ReduceHPTaken = reduceHpTaken;
         }
+
+        public override bool RemoveAble { get; set; }
+        public override bool LootAble { get; set; }
+        public override string Name { get; set; }
+        public override Position pos { get; set; }
     }
 }

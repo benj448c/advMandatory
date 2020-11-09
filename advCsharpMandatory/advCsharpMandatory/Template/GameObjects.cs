@@ -6,10 +6,10 @@ namespace advCsharpMandatory.Objects
 {
     public abstract class GameObjects
     {
-        public bool RemoveAble { get; set; }
-        public bool LootAble { get; set; }
-        public string Name { get; set; }
-        public Position pos { get; set; }
+        public abstract bool RemoveAble { get; set; }
+        public abstract bool LootAble { get; set; }
+        public abstract string Name { get; set; }
+        public abstract Position pos { get; set; }
 
         protected GameObjects(bool removeAble, bool lootAble, string name, Position pos)
         {

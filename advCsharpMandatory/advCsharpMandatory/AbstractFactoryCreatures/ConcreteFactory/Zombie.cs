@@ -6,12 +6,12 @@ namespace advCsharpMandatory.AbstractFactory
 {
     public class Zombie : ICreature
     {
-        public IFriendly CreateFriendly()
+        public override IFriendly CreateFriendly()
         {
             return new FriendlyZombie();
         }
 
-        public IEnemy CreateEnemy()
+        public override IEnemy CreateEnemy()
         {
             return new EnemyZombie();
         }

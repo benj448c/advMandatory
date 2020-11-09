@@ -4,9 +4,9 @@ using System.Text;
 
 namespace advCsharpMandatory.AbstractFactory
 {
-    public interface ICreature
+    public abstract class ICreature
     {
-        IFriendly CreateFriendly();
-        IEnemy CreateEnemy();
+        public abstract IFriendly CreateFriendly();
+        public abstract IEnemy CreateEnemy();
     }
 }

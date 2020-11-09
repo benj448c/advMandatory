@@ -9,5 +9,6 @@ namespace advCsharpMandatory.AbstractFactoryCreatures.AbstractProduct
         int GetDamage();
         int GetHP();
         Position GetPos();
+        string GetCreatureDetails();
     }
 }

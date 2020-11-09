@@ -36,25 +36,27 @@ namespace advCsharpMandatory
 			set { _position_X = value; }
 		}
 
-        public void Move(Direction direction)
+        public void Move(Direction direction, bool moveable)
         {
-            if (direction == Direction.Up)
+            if (moveable)
             {
-                Position_X += 1;
-            }
-            if (direction == Direction.Left)
-            {
-                Position_X -= 1;
-            }
-            if (direction == Direction.Right)
-            {
-                Position_Y += 1;
-            }
-            if (direction == Direction.Down)
-            {
-                Position_Y -= 1;
+                if (direction == Direction.Up)
+                {
+                    Position_X += 1;
+                }
+                if (direction == Direction.Left)
+                {
+                    Position_X -= 1;
+                }
+                if (direction == Direction.Right)
+                {
+                    Position_Y += 1;
+                }
+                if (direction == Direction.Down)
+                {
+                    Position_Y -= 1;
+                }
             }
         }
-
-	}
+    }
 }

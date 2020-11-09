@@ -7,6 +7,6 @@ namespace advCsharpMandatory.AbstractFactory
 {
     public interface IEnemy : ICreatureStats
     {
-        string GetCreatureDetails();
+        
     }
 }

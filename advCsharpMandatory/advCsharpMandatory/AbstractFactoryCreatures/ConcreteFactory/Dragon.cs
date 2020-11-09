@@ -8,12 +8,12 @@ namespace advCsharpMandatory.AbstractFactory
 {
     public class Dragon : ICreature
     {
-        public IFriendly CreateFriendly()
+        public override IFriendly CreateFriendly()
         {
             return new FriendlyDragon();
         }
 
-        public IEnemy CreateEnemy()
+        public override IEnemy CreateEnemy()
         {
             return new EnemyDragon();
         }

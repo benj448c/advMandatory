@@ -10,8 +10,6 @@ namespace Game
         {
             Console.WriteLine("Hello World!");
 
-
-
         }
     }
 }
