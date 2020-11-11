@@ -20,10 +20,5 @@ namespace advCsharpMandatory.AbstractFactory
         {
             return 1000;
         }
-
-        public Position GetPos()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

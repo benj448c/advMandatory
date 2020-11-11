@@ -4,7 +4,7 @@ using System.Text;
 
 namespace advCsharpMandatory
 {
-    class CharacterDirection
+    public class CharacterDirection
     {
         private int _direction;
 

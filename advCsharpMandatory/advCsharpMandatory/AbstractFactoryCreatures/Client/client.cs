@@ -30,11 +30,6 @@ namespace advCsharpMandatory.AbstractFactory
             return Friendly.GetHP();
         }
 
-        public Position GetFriendlyCreaturePos()
-        {
-            return Friendly.GetPos();
-        }
-
         public string GetEnemyCreatureDetails()
         {
             return Enemy.GetCreatureDetails();
@@ -48,11 +43,6 @@ namespace advCsharpMandatory.AbstractFactory
         public int GetEnemyCreatureHP()
         {
             return Enemy.GetHP();
-        }
-
-        public Position GetEnemyCreaturePos()
-        {
-            return Enemy.GetPos();
         }
     }
 }

@@ -6,16 +6,7 @@ namespace advCsharpMandatory
 {
     public class Position
     {
-
-        public enum Direction
-        {
-            Up,
-            Down,
-            Left,
-            Right
-        }
-
-		private double _position_X;
+        private double _position_X;
 		private double _position_Y;
 
         public Position(double positionX, double positionY)
@@ -36,23 +27,23 @@ namespace advCsharpMandatory
 			set { _position_X = value; }
 		}
 
-        public void Move(Direction direction, bool moveable)
+        public void Move(CharacterDirection direction, bool moveable)
         {
             if (moveable)
             {
-                if (direction == Direction.Up)
+                if (direction.DirectionName == CharacterDirection._directionEnum.North)
                 {
                     Position_X += 1;
                 }
-                if (direction == Direction.Left)
+                if (direction.DirectionName == CharacterDirection._directionEnum.West)
                 {
                     Position_X -= 1;
                 }
-                if (direction == Direction.Right)
+                if (direction.DirectionName == CharacterDirection._directionEnum.East)
                 {
                     Position_Y += 1;
                 }
-                if (direction == Direction.Down)
+                if (direction.DirectionName == CharacterDirection._directionEnum.South)
                 {
                     Position_Y -= 1;
                 }

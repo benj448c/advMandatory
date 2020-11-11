@@ -9,19 +9,13 @@ namespace advCsharpMandatory.Objects
         public int Range { get; set; }
         public int Hitpoint { get; set; }
 
-        public AttackObject(bool removeAble, bool lootAble, string name, Position pos, int range, int hitpoint) : base(removeAble, lootAble, name, pos)
+        public AttackObject(bool removeAble, bool lootAble, string name) : base(removeAble, lootAble, name)
         {
-            Range = range;
-            Hitpoint = hitpoint;
-            RemoveAble = removeAble;
-            LootAble = lootAble;
-            Name = name;
-            this.pos = pos;
         }
 
         public override bool RemoveAble { get; set; }
         public override bool LootAble { get; set; }
         public override string Name { get; set; }
-        public override Position pos { get; set; }
+
     }
 }

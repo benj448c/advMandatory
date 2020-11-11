@@ -1,33 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using advCsharpMandatory.AbstractFactoryCreatures.AbstractProduct;
+using advCsharpMandatory.interfaces;
 using advCsharpMandatory.Objects;
 
 namespace advCsharpMandatory
 {
-    public class World
+    public abstract class World
     {
-		private double _maxX;
-		private double _maxY;
-        public Dictionary<Position, ICreatureStats> Objectlist;
+		protected static int _maxX; 
+        protected static int _maxY;
+        public static Dictionary<Position, IPosition> ObjectAndCreaturelist;
+        protected char[,] _playground = new char[_maxY, _maxX];
 
-        public World()
-        {
-            Objectlist = new Dictionary<Position, ICreatureStats>();
-        }
 
-        public double MaxY
+
+        public int MaxY
 		{
 			get { return _maxY; }
 			set { _maxY = value; }
 		}
 
-		public double MaxX
+		public int MaxX
 		{
 			get { return _maxX; }
 			set { _maxX = value; }
 		}
+
+        public abstract void DrawWorld();
+
+        public void GetAllWeapons()
+        {
+            var weapons = ObjectAndCreaturelist.Select(i => i.Value).Where(d => d.GetType() == typeof(AttackObject));
+        }
 
     }
 }

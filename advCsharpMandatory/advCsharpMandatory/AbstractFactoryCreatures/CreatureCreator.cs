@@ -4,7 +4,7 @@ using System.Text;
 
 namespace advCsharpMandatory.AbstractFactory
 {
-    public class CreatureCreator
+    public abstract class CreatureCreator
     {
         public CreatureCreator()
         {
@@ -22,5 +22,7 @@ namespace advCsharpMandatory.AbstractFactory
             Console.WriteLine(dragonClient.GetEnemyCreatureDetails());
             Console.WriteLine(dragonClient.GetFriendlyCreatureDetails());
         }
+
+        public abstract void CreateCreature();
     }
 }

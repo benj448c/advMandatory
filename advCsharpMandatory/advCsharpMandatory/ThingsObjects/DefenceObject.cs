@@ -9,16 +9,14 @@ namespace advCsharpMandatory.Interfaces.DefenceObject
     {
         public int BonusHP { get; set; }
         public int ReduceHPTaken { get; set; }
+        public string Type { get; set; }
 
-        public DefenceObject(bool removeAble, bool lootAble, string name, Position pos, int bonusHp, int reduceHpTaken) : base(removeAble, lootAble, name, pos)
+        public DefenceObject(bool removeAble, bool lootAble, string name) : base(removeAble, lootAble, name)
         {
-            BonusHP = bonusHp;
-            ReduceHPTaken = reduceHpTaken;
         }
 
         public override bool RemoveAble { get; set; }
         public override bool LootAble { get; set; }
         public override string Name { get; set; }
-        public override Position pos { get; set; }
     }
 }
